@@ -1,0 +1,21 @@
+import java.io.File;
+
+/**
+ * 
+ * Rule 02. Expressions (EXP)
+ * 
+ * R02_EXP00_J: Do not ignore values returned by methods.
+ * 
+ */
+
+public class R02_EXP00_J {
+    
+    public void deleteFile(){
+        
+        File someFile = new File("someFileName.txt");
+        // Do something with someFile
+        someFile.delete();
+
+    }
+
+}
