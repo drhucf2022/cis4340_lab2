@@ -1,3 +1,6 @@
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 /**
  * 
  * Rule 07. Exceptional Behavior (ERR)
@@ -8,13 +11,14 @@
 
 public class R07_ERR02_J {
 
-    public void securityCheck() {
+    public void securityCheck(Logger logger) {
         try {
             // ...
-        } catch (SecurityException se) {
-            System.err.println(se);
+        } catch(SecurityException se) {
+            logger.log(Level.SEVERE, "Security exception occurred", se);
             // Recover from exception
         }
+
     }
 
 }
